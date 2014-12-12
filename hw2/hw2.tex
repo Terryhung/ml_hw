@@ -1,0 +1,69 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+\usepackage{fontspec,xltxtra,xunicode}
+% See geometry.pdf to learn the layout options. There are lots
+\usepackage{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\setromanfont{Apple LiSung Light}
+
+% ... or a4paper or a5paper or ...
+\geometry{letterpaper}
+\usepackage{graphicx}
+
+% ------ For pasting codes ------
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+% -----------------------------------
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+\title{homework 2}
+\author{Chung-Yen Hung B00201015\\ %replace with your name
+ Machine Learning} %if necessary, replace with your course title
+
+\maketitle
+
+\begin{enumerate}
+    \item
+      Probability error: $ \text{if } y = f(x) \text{but} P(x) \text{is error, then get } \mu\lambda \\ \text{Similarly in otherwise situation get } (1-\mu)(1-\lambda)$
+    \item
+      By problem 1: we get performance of $ h $ = $ \mu\lambda + 1 - \mu - \lambda + \mu\lambda$ \\
+      We want to make $ \mu $ independent of performance of $ h $ let $ 2\mu\lambda - \mu = 0 \text{ get } \lambda = \frac{1}{2}$
+    \item
+      By $ \delta = 4\text{(2N)}^{d_{vc}}\text{exp}(-\frac{1}{8}\varepsilon^{2}N)$\\
+      put $ d_{vc} = 10 \text{ and } \delta = 0.05 \text{ and } \varepsilon = 0.05$ \\
+      get $ 0.05 = 4096e^{-0.0003152N}N^{10}$ \\
+      put it into matlab\\
+      get $ N \approx 493$
+    \item
+      Using simple upper bound $ N^{d_{vc}} $ \\
+      \begin{enumerate}
+      \end{enumerate}
+\end{enumerate}
+
+\end{document}
