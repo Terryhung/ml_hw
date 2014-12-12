@@ -9,6 +9,6 @@ if __name__ == "__main__":
     y = map(lambda x: 0 if x == 0 else float(1), y)
     y = np.asarray(y, dtype="float64")
 
-    clf = svm.SVR(C=0.01, kernel="linear")
+    clf = svm.SVC(C=0.01, kernel="linear")
     clf.fit(X, y)
     print np.linalg.norm(clf.coef_)
